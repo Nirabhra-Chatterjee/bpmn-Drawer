@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ParentComponent } from './parent/parent.component';
 import { EditComponent } from './edit/edit.component';
+import { ViewComponent } from './view/view.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { EditComponent } from './edit/edit.component';
     CompComponent,
     HomeComponent,
     ParentComponent,
-    EditComponent
+    EditComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

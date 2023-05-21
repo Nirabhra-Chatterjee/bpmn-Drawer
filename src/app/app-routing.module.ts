@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ParentComponent } from './parent/parent.component';
 import { EditComponent } from './edit/edit.component';
+import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [{
   path: '',
@@ -21,6 +22,11 @@ const routes: Routes = [{
 {
   path:'edit',
   component:EditComponent, 
+
+},
+{
+  path:'comp/:id',
+  component:CompComponent, 
 
 }
 ];
