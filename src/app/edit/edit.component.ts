@@ -41,4 +41,17 @@ getAllFiles() {
 
   getFileList() {
           this.getAllFiles();
-}}
+}
+
+deleteXML(id: any){
+  this.id = id;
+  this.http.delete(`http://localhost:8080/files/${this.id}`)
+  .subscribe(() => {
+    alert("deleted");
+    console.log('File deleted successfully');
+    this.getAllFiles(); // Refresh the file list after deletion
+  });
+}
+
+}
+

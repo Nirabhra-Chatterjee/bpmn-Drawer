@@ -116,3 +116,21 @@ button:hover {
     margin-bottom: 30px;
     color: #333333;
   }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #af4c4c;
+    color: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: #af4c4c;
+}
+
+.buttons {
+    margin-top: 50px;
+}

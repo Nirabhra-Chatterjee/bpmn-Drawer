@@ -30,6 +30,7 @@
     <div class="file-actions">
       <a href="{{ file.url }}" class="file-download">Download</a>
       <button [routerLink]="['/comp', file.id]" class="file-edit">Edit Diagram</button>
+      <button class="btn btn-success" (click)="deleteXML(file.id)">DELETE</button>
     </div>
   </li>
 </ul>

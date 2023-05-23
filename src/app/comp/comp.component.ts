@@ -29,6 +29,7 @@ export class CompComponent implements AfterContentInit, OnChanges, OnDestroy, On
 
   imageName = '';
   saveStatus = ''; // Variable to track the save status
+  fileId: any | undefined;
 
   @ViewChild('ref', { static: true }) private el: ElementRef | undefined;
   @Input() public url?: string;
@@ -36,7 +37,12 @@ export class CompComponent implements AfterContentInit, OnChanges, OnDestroy, On
   private bpmnJS: any = new BpmnJS();
   accessIdValue(id: any) {
     // Do something with the ID
-    this.url = 'http://localhost:8080/files/' + id.toString();
+    if(id){
+    this.fileId = id;
+    this.url = 'http://localhost:8080/files/' + id.toString();}
+    else{
+      console.log("new");
+    }
   }
   constructor(private http: HttpClient, private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
@@ -133,8 +139,17 @@ export class CompComponent implements AfterContentInit, OnChanges, OnDestroy, On
     const fileName = this.imageName || 'diagram';
     // FileSaver.saveAs(blob, `${fileName}.bpmn`);
     
-
-
+    if (this.fileId) {
+      const updateUrl = `http://localhost:8080/files/${this.fileId}`;
+      let formData:FormData = new FormData();
+      formData.append("file", blob, fileName);
+      console.log(formData);
+      await this.http.put(updateUrl, formData).subscribe((response: any) => {
+        console.log(response);
+        alert('updated');
+        this.saveStatus = 'Updated';
+      });}
+      else{
     let testData:FormData = new FormData();
     testData.append("file", blob, fileName);
     testData.append("name", fileName);
@@ -146,8 +161,9 @@ export class CompComponent implements AfterContentInit, OnChanges, OnDestroy, On
     this.saveStatus = 'Saving...';
     await this.http.post("http://localhost:8080/upload", testData).subscribe((response: any) => {
       console.log(response);
+      alert("saved");
       this.saveStatus = 'Saved';
     });
-
+  }
   }
 }
