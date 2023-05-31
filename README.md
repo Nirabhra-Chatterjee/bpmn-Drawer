@@ -91,6 +91,15 @@ To run this project, you will need to install Angular and run 'npm install'. Thi
 
 
 
+## Screenshots
+
+
+![ems1](https://github.com/Nirabhra-Chatterjee/bpmn-Drawer/assets/107489758/6baf9dae-517f-4a5d-9c3b-de0019998ff9)
+![ems2](https://github.com/Nirabhra-Chatterjee/bpmn-Drawer/assets/107489758/a6bfbf50-2db0-406a-a566-da40ad9a0e19)
+![ems3](https://github.com/Nirabhra-Chatterjee/bpmn-Drawer/assets/107489758/6ae53539-c037-4263-b522-bc5d8ca7d739)
+![ems4](https://github.com/Nirabhra-Chatterjee/bpmn-Drawer/assets/107489758/c2db45ac-851b-48f6-81b5-be5f2a347083)
+
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
