@@ -1,6 +1,7 @@
 # Drawer
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+It is a BPMN diagram drawer, where you can create diagrams for buissiness processes.
 
 ## Development server
 
@@ -80,6 +81,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To run this project, you will need to install Angular and run 'npm install'. This will download every dependency.
 
+
+## Libraries
+
+bpmn-js: https://github.com/bpmn-io/bpmn-js-example-angular
+FileSaver.js: https://www.npmjs.com/package/angular-file-saver
 
 
 
